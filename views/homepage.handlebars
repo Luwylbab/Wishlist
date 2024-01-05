@@ -1,0 +1,17 @@
+<!-- Loop over each object in the lists array -->
+{{#each lists as |list| }}
+<div class="row mb-4 list">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      <a href="/list/{{list.id}}">{{list.name}}</a>
+    </h2>
+    <p>{{list.user.name}}'s GiftPot created on {{format_date list.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{list.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
