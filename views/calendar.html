@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Figure out how to pass the calendar using handlebars -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <!-- Scripts for the calendar display -->
+    <script src="
+https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js
+"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
+    <!-- End here -->
+</head>
+
+<body>
+    <!-- body of the calendar -->
+    <div id="calendar"></div>
+</body>
+
+</html>
