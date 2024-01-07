@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Figure out how to pass the calendar using handlebars -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
-    <!-- Scripts for the calendar display -->
-    <script src="
-https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js
-"></script>
-    <script>
-            calendar.render();
-    </script>
-    <!-- End here -->
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">  
+    <title>Handlebars Calendar</title>
+    <!-- Include Handlebars library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <!-- Include FullCalendar library -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+    <!-- Include your JavaScript file -->
+    <script src="./calendar.js"></script>
 </head>
 
 <body>
-    <!-- body of the calendar -->
     <div id="calendar"></div>
 </body>
-<script src="./calendar.js"></script>
 
 </html>
