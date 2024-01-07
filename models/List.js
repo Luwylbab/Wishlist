@@ -11,24 +11,17 @@ List.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    item: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // description: {
-    //   type: DataTypes.STRING,
-    // },
-    date_created: {
-      type: DataTypes.DATE,
+    price: {
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
+    link: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {

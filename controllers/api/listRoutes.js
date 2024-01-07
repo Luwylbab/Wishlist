@@ -5,7 +5,9 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
   try {
     const newList = await List.create({
-      ...req.body,
+      item: req.body.item,
+      price: req.body.price,
+      link: req.body.link,
       user_id: req.session.user_id,
     });
 
@@ -15,38 +17,48 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.put('/', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
-    const newList = await List.findOne({
-      ...req.body,
-      user_id: req.session.user_id,
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
+    const updatedList = await List.update(
+      {
+        item: req.body.item,
+        price: req.body.price,
+        link: req.body.link,
       },
-    });
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
 
-    res.status(200).json(newList);
+    if (!updatedList[0]) {
+      res.status(404).json({ message: 'No List found with this id!' });
+      return;
+    }
+
+    res.status(200).json(updatedList);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const listData = await List.destroy({
+    const deletedList = await List.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!listData) {
+    if (!deletedList) {
       res.status(404).json({ message: 'No List found with this id!' });
       return;
     }
 
-    res.status(200).json(listData);
+    res.status(200).json(deletedList);
   } catch (err) {
     res.status(500).json(err);
   }
