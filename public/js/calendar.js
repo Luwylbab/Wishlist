@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Data to be displayed
   var calendarData = [
       {
-          title: 'Sample Event',
-          start: '2024-01-01',
-          end: '2024-01-02',
+          title: 'Easter Egg',
+          start: '2024-01-08',
+          end: '2024-01-09',
           url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
       },
       // Add more events as needed...
