@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const Lists = listData.map((List) => List.get({ plain: true }));
+    const lists = listData.map((List) => list.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      Lists, 
+      lists, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/List/:id', async (req, res) => {
+router.get('/list/:id', async (req, res) => {
   try {
     const listData = await List.findByPk(req.params.id, {
       include: [
@@ -38,10 +38,10 @@ router.get('/List/:id', async (req, res) => {
       ],
     });
 
-    const List = listData.get({ plain: true });
+    const list = listData.get({ plain: true });
 
-    res.render('List', {
-      ...List,
+    res.render('list', {
+      ...list,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -60,10 +60,10 @@ router.get('/edit/:id', async (req, res) => {
       ],
     });
 
-    const List = listData.get({ plain: true });
+    const list = listData.get({ plain: true });
 
     res.render('edit', {
-      ...List,
+      ...list,
       logged_in: req.session.logged_in
     });
   } catch (err) {

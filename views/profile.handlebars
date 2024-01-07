@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a GiftPot:</h3>
+
+    <form class="form new-list-form">
+      <div class="form-group">
+        <label for="list-name">GiftPot name:</label>
+        <input class="form-input" type="text" id="list-name" name="list-name" />
+      </div>
+      <div class="form-group">
+        <label for="item-name">item:</label>
+        <textarea class="form-input" id="item-name" name="item-name"></textarea>
+        <label for="item-price">price:</label>
+        <textarea class="form-input" id="item-price" name="item-price"></textarea>
+        <label for="item-link">link:</label>
+        <textarea class="form-input" id="item-link" name="item-link"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+<script src="./js/profile.js"></script>
