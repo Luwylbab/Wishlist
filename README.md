@@ -130,4 +130,4 @@ This project is graded based on the following criteria:
 * The URL of the GitHub repository, with a unique name and a README describing the project.
 
 ---
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. :0
