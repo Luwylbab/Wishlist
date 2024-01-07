@@ -1,0 +1,127 @@
+/*  * VARIABLES */ /* #region */
+:root {
+  --green1: #d5e7ba;
+  --green2: #c9dfa8;
+  --green3: #b0ce84;
+  --green4: #a5c377;
+  --green5: #94b661;
+  --light: #e8f3d7;
+  --dark: #181d10;
+}
+/* #endregion */
+/*  * MAJOR SELECTORS */ /* #region */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper,
+.page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--green1);
+}
+
+.wrapper {
+  color: var(--light);
+}
+
+/* #endregion */
+/*  * COLOR CLASSES */ /* #region */
+.var-text-green1 {
+  color: var(--green1);
+}
+
+.var-text-green2 {
+  color: var(--green2);
+}
+
+.var-text-green3 {
+  color: var(--green3);
+}
+
+.var-text-green4 {
+  color: var(--green4);
+}
+
+.var-text-green5 {
+  color: var(--green5);
+}
+
+.var-text-light {
+  color: var(--light);
+}
+
+.var-text-dark {
+  color: var(--dark);
+}
+/* #endregion */
+/*  * BTN */ /* #region */
+.btn {
+  border: 2px solid var(--light);
+  background-color: var(--green4);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: var(--light);
+  cursor: pointer;
+  filter: brightness(0.8);
+  transition: filter 0.4s ease;
+}
+
+.btn:hover {
+  filter: brightness(1);
+}
+/* #endregion */
+/*  * HEADER */ /* #region */
+header {
+  text-align: left;
+  color: var(--light);
+  background: var(--green3);
+  padding: 1% 0;
+  padding-left: 5%;
+}
+
+header h1 {
+  font-size: xxx-large;
+}
+
+a{
+  text-decoration: none;
+  color: var(--light);
+}
+
+/* #endregion */
+/*  * LOGIN-MENU */ /* #region */
+#login-menu {
+  border: 2px solid var(--green5);
+  background-color: var(--green3);
+}
+
+#login-menu label {
+  text-decoration: underline;
+}
+
+/* #endregion */
+/*  * SIGNUP-MENU */ /* #region */
+#signup-menu {
+  border: 2px solid var(--green5);
+  background-color: var(--green3);
+}
+
+#signup-menu label {
+  text-decoration: underline;
+}
+
+/* #endregion */
+
+/*  * DEVELOPING CODE */
+#this {
+  background-color: var(--dark);
+}

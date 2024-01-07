@@ -1,8 +1,8 @@
 # Project2
 Goals:
-Get comfortable calling a rest API we built from our front-end
-Get comfortable with a database
-Get comfortable with authorization
+* Get comfortable calling a rest API we built from our front-end
+* Get comfortable with a database
+* Get comfortable with authorization
 
 # Rubric
 # 15 Project 2: Interactive Full-Stack Application
