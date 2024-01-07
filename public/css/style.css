@@ -63,6 +63,36 @@ body {
 .var-text-dark {
   color: var(--dark);
 }
+
+.var-bg-green1 {
+  background-color: var(--green1);
+}
+
+.var-bg-green2 {
+  background-color: var(--green2);
+}
+
+.var-bg-green3 {
+  background-color: var(--green3);
+}
+
+.var-bg-green4 {
+  background-color: var(--green4);
+}
+
+.var-bg-green5 {
+  background-color: var(--green5);
+}
+
+.var-bg-light {
+  background-color: var(--light);
+}
+
+.var-bg-dark {
+  background-color: var(--dark);
+}
+
+
 /* #endregion */
 /*  * BTN */ /* #region */
 .btn {
