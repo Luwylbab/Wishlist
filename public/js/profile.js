@@ -39,6 +39,28 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const addItem = () => {
+  const additionalItemsDiv = document.getElementById('additional-items');
+
+  const itemRow = document.createElement('div');
+  itemRow.classList.add('item-row');
+  itemRow.innerHTML = `
+    <label for="item-name">Item:</label>
+    <input class="form-input" type="text" id="item-name" name="item-name" />
+    <label for="item-price">Price:</label>
+    <input class="form-input" type="text" id="item-price" name="item-price" />
+    <label for="item-link">Link:</label>
+    <input class="form-input" type="text" id="item-link" name="item-link" />
+  `;
+
+  additionalItemsDiv.appendChild(itemRow);
+};
+
+const removeItem = (button) => {
+  const itemRow = button.closest('.item-row');
+  itemRow.remove();
+};
+
 document
   .querySelector('.new-list-form')
   .addEventListener('submit', newFormHandler);
