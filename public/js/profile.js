@@ -56,9 +56,15 @@ const addItem = () => {
   additionalItemsDiv.appendChild(itemRow);
 };
 
-const removeItem = (button) => {
-  const itemRow = button.closest('.item-row');
-  itemRow.remove();
+const removeItem = () => {
+  const additionalItemsDiv = document.getElementById('additional-items');
+  const itemRows = additionalItemsDiv.getElementsByClassName('item-row');
+  
+  // Check if there is at least one item in the list
+  if (itemRows.length > 0) {
+    const lastItemRow = itemRows[itemRows.length - 1];
+    additionalItemsDiv.removeChild(lastItemRow);
+  }
 };
 
 document
