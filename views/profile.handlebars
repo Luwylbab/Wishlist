@@ -8,23 +8,28 @@
   <div class="col-md-6">
     <h3>Create a GiftPot:</h3>
 
-    <form class="form new-list-form">
-      <div class="form-group">
-        <label for="list-name">GiftPot name:</label>
-        <input class="form-input" type="text" id="list-name" name="list-name" />
-      </div>
-      <div class="form-group">
-        <label for="item-name">item:</label>
-        <textarea class="form-input" id="item-name" name="item-name"></textarea>
-        <label for="item-price">price:</label>
-        <textarea class="form-input" id="item-price" name="item-price"></textarea>
-        <label for="item-link">link:</label>
-        <textarea class="form-input" id="item-link" name="item-link"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
+<form class="form new-list-form">
+  <div class="form-group">
+    <label for="list-name">GiftPot name:</label>
+    <input class="form-input" type="text" id="list-name" name="list-name" />
+  </div>
+  <div class="form-group">
+    <div class="item-row">
+      <label for="item-name">Item:</label>
+      <input class="form-input" type="text" id="item-name" name="item-name" />
+      <label for="item-price">Price:</label>
+      <input class="form-input" type="text" id="item-price" name="item-price" />
+      <label for="item-link">Link:</label>
+      <input class="form-input" type="text" id="item-link" name="item-link" />
+    </div>
+    <div id="additional-items"></div>
+      <button type="button" class="btn btn-primary" onclick="addItem()">Add Item</button>
+      <button type="button" class="btn btn-primary" onclick="removeItem()">Remove Item</button>
+    </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Create</button>
+  </div>
+</form>
   </div>
 
 <script src="./js/profile.js"></script>

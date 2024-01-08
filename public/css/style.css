@@ -155,3 +155,8 @@ a{
 #this {
   background-color: var(--dark);
 }
+
+.item-row {
+  display: flex;
+  align-items: center;
+}
