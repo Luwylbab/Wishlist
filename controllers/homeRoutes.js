@@ -100,6 +100,7 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
 router.get('/calendar', async (req, res) => {
   try {
     // Pass serialized data and session flag into template

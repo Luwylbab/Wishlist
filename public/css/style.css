@@ -116,6 +116,7 @@ header {
   background: var(--green3);
   padding: 1% 0;
   padding-left: 5%;
+  border-bottom: 8px solid var(--green5);
 }
 
 header h1 {
@@ -129,29 +130,104 @@ a{
 
 /* #endregion */
 /*  * LOGIN-MENU */ /* #region */
-#login-menu {
-  border: 2px solid var(--green5);
-  background-color: var(--green3);
-}
-
 #login-menu label {
   text-decoration: underline;
 }
 
 /* #endregion */
 /*  * SIGNUP-MENU */ /* #region */
-#signup-menu {
-  border: 2px solid var(--green5);
-  background-color: var(--green3);
-}
-
 #signup-menu label {
   text-decoration: underline;
 }
 
 /* #endregion */
+/*  * MAIN-LOGIN-DIV */ /* #region */
+  #main-login-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+/* #endregion */
+/*  * MAIN-LOGIN-BTNS */ /* #region */
+#main-login-btns {
+  margin: 4px;
+  display: block;
+  font-size: 32px;
+}
+/* #endregion */
+/*  * CUSTOM CLASSES */ /* #region */
+.custom-border {
+  border: 2px solid var(--green5);
+}
 
+.custom-border-lg {
+  border: 8px solid var(--green5);
+}
+
+.custom-text-xxl {
+  font-size: 64px;
+}
+
+.custom-text-xl {
+  font-size: 48px;
+}
+
+.custom-text-lg {
+  font-size: 36px;
+}
+
+.custom-text-md {
+  font-size: 24px;
+}
+
+.custom-text-sm {
+  font-size: 18px;
+}
+
+.custom-underline {
+  text-decoration: underline;
+}
+
+.custom-bg-green1 {
+  background-color: var(--green1);
+}
+
+.custom-bg-green2 {
+  background-color: var(--green2);
+}
+
+.custom-bg-green3 {
+  background-color: var(--green3);
+}
+
+.custom-bg-green4 {
+  background-color: var(--green4);
+}
+
+.custom-bg-green5 {
+  background-color: var(--green5);
+}
+
+.custom-bg-light {
+  background-color: var(--light);
+}
+
+.custom-bg-dark {
+  background-color: var(--dark);
+}
+
+.custom-inline {
+  display: inline-block;
+}
+/* #endregion */
 /*  * DEVELOPING CODE */
 #this {
   background-color: var(--dark);
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
 }
