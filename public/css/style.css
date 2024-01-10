@@ -5,8 +5,19 @@
   --green3: #b0ce84;
   --green4: #a5c377;
   --green5: #94b661;
+  --green6: #50662e;
   --light: #e8f3d7;
   --dark: #181d10;
+  /* calendar */
+  /* calendar lines */
+  --fc-border-color: black;
+  /* calendar current day background color */
+  --fc-today-bg-color: var(--green5);
+  /* calendar text size */
+  --fc-small-font-size: 1.15em;
+  /* top button text color */
+  --fc-button-text-color: #fff;
+  --fc-page-bg-color: #fff
 }
 /* #endregion */
 /*  * MAJOR SELECTORS */ /* #region */
@@ -32,6 +43,11 @@ body {
 
 .wrapper {
   color: var(--light);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--green6);
 }
 
 /* #endregion */
@@ -97,16 +113,16 @@ body {
 /*  * BTN */ /* #region */
 .btn {
   border: 2px solid var(--light);
-  background-color: var(--green4);
+  background-color: var(--green5);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: var(--light);
   cursor: pointer;
-  filter: brightness(0.8);
   transition: filter 0.4s ease;
 }
 
 .btn:hover {
-  filter: brightness(1);
+  background-color: var(--green6);
+  border: 2px solid var(--dark);
 }
 /* #endregion */
 /*  * HEADER */ /* #region */
@@ -127,17 +143,42 @@ a{
   text-decoration: none;
   color: var(--light);
 }
+/* calendar text color */
+.fc-daygrid-day-top a {
+  color:var(--dark);
+}
+/* calendar name day text color */
+.fc-col-header a {
+color:var(--dark)
+}
+/* calendar lines padding */
+.fc td, .fc th {
+  padding: 1px;
+}
+/* calendar lines border attributes */
+.fc-theme-standard td, .fc-theme-standard th {
+border: 2px solid var(--dark);
+border-radius: 1px;
+}
 
 /* #endregion */
 /*  * LOGIN-MENU */ /* #region */
+
+#login-menu {
+  padding: 64px;
+}
+
 #login-menu label {
   text-decoration: underline;
+  font-size: 24px;
+  padding-left: 20px;
 }
 
 /* #endregion */
 /*  * SIGNUP-MENU */ /* #region */
 #signup-menu label {
   text-decoration: underline;
+  font-size: 24px;
 }
 
 /* #endregion */
@@ -148,6 +189,7 @@ a{
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding-top: 8px;
   }
 /* #endregion */
 /*  * MAIN-LOGIN-BTNS */ /* #region */
@@ -230,4 +272,33 @@ a{
 .item-row {
   display: flex;
   align-items: center;
+  padding: 4px;
+}
+
+#img-container {
+  padding-left: 0;
+  padding-right: 0;
+  padding: 10px;
+}
+
+.main-menu-img {
+  width: 100%
+}
+
+form .form-input {
+  background-color: var(--light);
+  border: 1px solid var(--green3);
+}
+
+#create-list-btn {
+  font-size: 36px;
+  margin: 10px;
+}
+
+#btn-xxl {
+  font-size: xx-large;
+}
+#calendar {
+  color: var(--dark);
+  /* background-color: var(--green6); */
 }

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
           right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
       events: calendarData,
-      timezone: 'UTC' // Set your desired timezone
+      
   });
 
   calendar.render();
