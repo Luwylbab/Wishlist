@@ -1,35 +1,35 @@
 <div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+  <div class="col-auto var-text-light custom-border-lg custom-bg-green3 custom-inline col-6">
+    <h2 class="custom-text-xl">Welcome, {{name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a GiftPot:</h3>
-
-<form class="form new-list-form">
-  <div class="form-group">
-    <label for="list-name">GiftPot name:</label>
-    <input class="form-input" type="text" id="list-name" name="list-name" />
-  </div>
-  <div class="form-group">
-    <div class="item-row">
-      <label for="item-name">Item:</label>
-      <input class="form-input" type="text" id="item-name" name="item-name" />
-      <label for="item-price">Price:</label>
-      <input class="form-input" type="text" id="item-price" name="item-price" />
-      <label for="item-link">Link:</label>
-      <input class="form-input" type="text" id="item-link" name="item-link" />
+  <div class="col-md-6  var-bg-green3 custom-border" id="new-giftpot">
+    <h3 class="var-text-light custom-text-lg custom-underline">Create a GiftPot</h3>
+  <form class="form new-list-form">
+    <div class="form-group">
+      <label for="list-name">GiftPot name:</label>
+      <input class="form-input" type="text" id="list-name" name="list-name" />
     </div>
-    <div id="additional-items"></div>
-      <button type="button" class="btn btn-primary" onclick="addItem()">Add Item</button>
-      <button type="button" class="btn btn-primary" onclick="removeItem()">Remove Item</button>
+    <div class="form-group">
+      <div class="item-row">
+        <label for="item-name">Item:</label>
+        <input class="form-input" type="text" id="item-name" name="item-name" />
+        <label for="item-price">Price:</label>
+        <input class="form-input" type="text" id="item-price" name="item-price" />
+        <label for="item-link">Link:</label>
+        <input class="form-input" type="text" id="item-link" name="item-link" />
+      </div>
+      <div id="additional-items">
+        <button type="button" class="btn" onclick="addItem()">Add Item</button>
+        <button type="button" class="btn" onclick="removeItem()">Remove Item</button>
+      </div>
     </div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary">Create</button>
+    <div class="form-group">
+      <button type="submit" class="btn" id="create-list-btn">Create my GiftPot!</button>
+    </div>
+  </form>
   </div>
-</form>
-  </div>
-
+</div>
 <script src="./js/profile.js"></script>
