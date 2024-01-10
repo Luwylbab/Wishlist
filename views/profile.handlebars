@@ -11,6 +11,17 @@
     <div class="form-group">
       <label for="list-name">GiftPot name:</label>
       <input class="form-input" type="text" id="list-name" name="list-name" />
+    <label for="list-exp">GiftPot Exp. Date:</label>
+    <input class="form-input" type="text" id="list-exp" name="list-exp" />
+  </div>
+  <div class="form-group">
+    <div class="item-row">
+      <label for="item-name">Item:</label>
+      <input class="form-input" type="text" id="item-name" name="item-name" />
+      <label for="item-price">Price:</label>
+      <input class="form-input" type="text" id="item-price" name="item-price" />
+      <label for="item-link">Link:</label>
+      <input class="form-input" type="text" id="item-link" name="item-link" />
     </div>
     <div class="form-group">
       <div class="item-row">
@@ -32,4 +43,28 @@
   </form>
   </div>
 </div>
+  {{#if lists.length}}
+  <div class="col-md-6 list-array">
+    <h3>Your GiftPots:</h3>
+
+    {{#each lists as |list|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4>{{list.name}}</h4>
+        <h2>{{list.expiration}}</h2>
+          <div class="item-row">
+          <p>{{list.item}}</p>
+          <p>{{list.price}}</p>
+          <a href="{{list.link}}"><button>BUY</button></a>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{list.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
 <script src="./js/profile.js"></script>

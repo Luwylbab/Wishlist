@@ -11,6 +11,14 @@ List.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    expiration: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     item: {
       type: DataTypes.STRING,
       allowNull: false,
