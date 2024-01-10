@@ -8,6 +8,16 @@
   --green6: #50662e;
   --light: #e8f3d7;
   --dark: #181d10;
+  /* calendar */
+  /* calendar lines */
+  --fc-border-color: black;
+  /* calendar current day background color */
+  --fc-today-bg-color: var(--green5);
+  /* calendar text size */
+  --fc-small-font-size: 1.15em;
+  /* top button text color */
+  --fc-button-text-color: #fff;
+  --fc-page-bg-color: #fff
 }
 /* #endregion */
 /*  * MAJOR SELECTORS */ /* #region */
@@ -132,6 +142,23 @@ header h1 {
 a{
   text-decoration: none;
   color: var(--light);
+}
+/* calendar text color */
+.fc-daygrid-day-top a {
+  color:var(--dark);
+}
+/* calendar name day text color */
+.fc-col-header a {
+color:var(--dark)
+}
+/* calendar lines padding */
+.fc td, .fc th {
+  padding: 1px;
+}
+/* calendar lines border attributes */
+.fc-theme-standard td, .fc-theme-standard th {
+border: 2px solid var(--dark);
+border-radius: 1px;
 }
 
 /* #endregion */
@@ -270,4 +297,8 @@ form .form-input {
 
 #btn-xxl {
   font-size: xx-large;
+}
+#calendar {
+  color: var(--dark);
+  /* background-color: var(--green6); */
 }
