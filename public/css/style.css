@@ -136,9 +136,15 @@ a{
 
 /* #endregion */
 /*  * LOGIN-MENU */ /* #region */
+
+#login-menu {
+  padding: 64px;
+}
+
 #login-menu label {
   text-decoration: underline;
   font-size: 24px;
+  padding-left: 20px;
 }
 
 /* #endregion */
@@ -257,12 +263,11 @@ form .form-input {
   border: 1px solid var(--green3);
 }
 
-
 #create-list-btn {
   font-size: 36px;
   margin: 10px;
 }
 
-#new-giftpot {
-  
+#btn-xxl {
+  font-size: xx-large;
 }
