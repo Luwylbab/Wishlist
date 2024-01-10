@@ -5,14 +5,17 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
   try {
     const newList = await List.create({
+      name: req.body.name,
+      expiration: req.body.expiration,
       item: req.body.item,
-      price: req.body.price,
+      price: parseInt(req.body.price),
       link: req.body.link,
       user_id: req.session.user_id,
     });
 
     res.status(200).json(newList);
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });

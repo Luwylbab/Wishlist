@@ -2,6 +2,7 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#list-name').value.trim();
+  const expiration = document.querySelector('#list-exp').value.trim();
   const item = document.querySelector('#item-name').value.trim();
   const price = document.querySelector('#item-price').value.trim();
   const link = document.querySelector('#item-link').value.trim();
@@ -9,11 +10,14 @@ const newFormHandler = async (event) => {
   if (name && item) {
     const response = await fetch(`/api/lists`, {
       method: 'POST',
-      body: JSON.stringify({ name, item, price, link }),
+      body: JSON.stringify({ name, expiration, item, price, link }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
+
+    const result = await response.json()
+      console.log(result);
 
     if (response.ok) {
       document.location.replace('/profile');

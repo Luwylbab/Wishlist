@@ -10,8 +10,10 @@
 
 <form class="form new-list-form">
   <div class="form-group">
-    <label for="list-name">GiftPot name:</label>
+    <label for="list-name">GiftPot Name:</label>
     <input class="form-input" type="text" id="list-name" name="list-name" />
+    <label for="list-exp">GiftPot Exp. Date:</label>
+    <input class="form-input" type="text" id="list-exp" name="list-exp" />
   </div>
   <div class="form-group">
     <div class="item-row">
@@ -27,9 +29,31 @@
       <button type="button" class="btn btn-primary" onclick="removeItem()">Remove Item</button>
     </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary">Create</button>
+    <button type="submit" class="btn btn-primary">Create GiftPot</button>
   </div>
-</form>
+ </form>
+</div>
+  {{#if lists.length}}
+  <div class="col-md-6 list-array">
+    <h3>Your GiftPots:</h3>
+
+    {{#each lists as |list|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4>{{list.name}}</h4>
+          <div class="item-row">
+          <p>{{list.item}}</p>
+          <p>{{list.price}}</p>
+          <a href="{{list.link}}"><button>BUY</button></a>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{list.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
   </div>
+  {{/if}}
+</div>
 
 <script src="./js/profile.js"></script>
