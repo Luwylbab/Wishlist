@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GiftPot</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a href="/">GiftPot</a>
+      </h1>
+      <nav>
+        {{#if logged_in}}
+        <a href="/profile">
+          <button class="btn header-btns">My Profile</button>
+        </a>
+        |
+        <a href="/calendar">
+          <button class="btn header-btns">Calendar</button>
+        </a>
+        |
+        <a href="/global">
+          <button class="btn header-btns">All GiftPots</button>
+        </a>
+        |
+        <button class="btn header-btns" id="logout">Log Out</button>
+        {{else}}
+        <a href="/login">
+          <button class="btn header-btns">Login</button>
+        </a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5 mx-0">
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

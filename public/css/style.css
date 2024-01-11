@@ -1,0 +1,440 @@
+/*  * VARIABLES */ /* #region */
+:root {
+  --green1: #c6e795;
+  --green2: #afdb6d;
+  --green3: #9dd14f;
+  --green4: #80af38;
+  --green5: #2b771c;
+  --green6: #023f05;
+  --light: #d0f8b9;
+  --dark: #181d10;
+  /* calendar */
+  /* calendar lines */
+  --fc-border-color: black;
+  /* calendar current day background color */
+  --fc-today-bg-color: var(--green5);
+  /* calendar text size */
+  --fc-small-font-size: 1.15em;
+  /* top button text color */
+  --fc-button-text-color: #fff;
+  --fc-page-bg-color: #fff
+}
+/* #endregion */
+/*  * MAJOR SELECTORS */ /* #region */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper,
+.page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--green1);
+}
+
+.wrapper {
+  color: var(--light);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--green6);
+}
+
+/* #endregion */
+/*  * COLOR CLASSES */ /* #region */
+.var-text-green1 {
+  color: var(--green1);
+}
+
+.var-text-green2 {
+  color: var(--green2);
+}
+
+.var-text-green3 {
+  color: var(--green3);
+}
+
+.var-text-green4 {
+  color: var(--green4);
+}
+
+.var-text-green5 {
+  color: var(--green5);
+}
+
+.var-text-light {
+  color: var(--light);
+}
+
+.var-text-dark {
+  color: var(--dark);
+}
+
+.var-bg-green1 {
+  background-color: var(--green1);
+}
+
+.var-bg-green2 {
+  background-color: var(--green2);
+}
+
+.var-bg-green3 {
+  background-color: var(--green3);
+}
+
+.var-bg-green4 {
+  background-color: var(--green4);
+}
+
+.var-bg-green5 {
+  background-color: var(--green5);
+}
+
+.var-bg-green6 {
+  background-color: var(--green6);
+}
+
+.var-bg-light {
+  background-color: var(--light);
+}
+
+.var-bg-dark {
+  background-color: var(--dark);
+}
+
+
+/* #endregion */
+/*  * BTN */ /* #region */
+.btn {
+  border: 2px solid var(--dark);
+  background-color: var(--green5);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: var(--light);
+  cursor: pointer;
+  transition: filter 0.4s ease;
+}
+
+.btn:hover {
+  background-color: var(--green4);
+  border: 2px solid var(--light);
+}
+/* #endregion */
+/*  * HEADER */ /* #region */
+header {
+  text-align: left;
+  color: var(--light);
+  background: var(--green3);
+  padding: 1% 0;
+  padding-left: 5%;
+  border-bottom: 8px solid var(--green5);
+}
+
+header h1 {
+  font-size: xxx-large;
+}
+
+a{
+  text-decoration: none;
+  color: var(--light);
+}
+/* calendar text color */
+.fc-daygrid-day-top a {
+  color:var(--dark);
+}
+/* calendar name day text color */
+.fc-col-header a {
+color:var(--dark)
+}
+/* calendar lines padding */
+.fc td, .fc th {
+  padding: 1px;
+}
+/* calendar lines border attributes */
+.fc-theme-standard td, .fc-theme-standard th {
+border: 2px solid var(--dark);
+border-radius: 1px;
+}
+
+/* #endregion */
+/*  * LOGIN-MENU */ /* #region */
+#login-menu {
+  padding: 64px;
+}
+
+#login-menu label {
+  text-decoration: underline;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+/* #endregion */
+/*  * SIGNUP-MENU */ /* #region */
+#signup-menu {
+  padding: 64px;
+}
+
+#signup-menu label {
+  text-decoration: underline;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+/* #endregion */
+/*  * MAIN-LOGIN-DIV */ /* #region */
+#main-login-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 8px;
+}
+/* #endregion */
+/*  * MAIN-LOGIN-BTNS */ /* #region */
+#main-login-btns {
+  margin: 4px;
+  display: block;
+  font-size: 32px;
+}
+/* #endregion */
+/*  * CUSTOM CLASSES */ /* #region */
+.custom-border {
+  border: 2px solid var(--green5);
+}
+
+.custom-border-lg {
+  border: 8px solid var(--green5);
+}
+
+.custom-text-xxl {
+  font-size: 64px;
+}
+
+.custom-text-xl {
+  font-size: 48px;
+}
+
+.custom-text-lg {
+  font-size: 36px;
+}
+
+.custom-text-md {
+  font-size: 24px;
+}
+
+.custom-text-sm {
+  font-size: 18px;
+}
+
+.custom-underline {
+  text-decoration: underline;
+}
+
+.custom-bg-green1 {
+  background-color: var(--green1);
+}
+
+.custom-bg-green2 {
+  background-color: var(--green2);
+}
+
+.custom-bg-green3 {
+  background-color: var(--green3);
+}
+
+.custom-bg-green4 {
+  background-color: var(--green4);
+}
+
+.custom-bg-green5 {
+  background-color: var(--green5);
+}
+
+.custom-bg-green6 {
+  background-color: var(--green6);
+}
+
+.custom-bg-light {
+  background-color: var(--light);
+}
+
+.custom-bg-dark {
+  background-color: var(--dark);
+}
+
+.custom-inline {
+  display: inline-block;
+}
+/* #endregion */
+/*  * DEVELOPING CODE */
+.item-row {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+#img-container {
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu-img {
+  width: 100%;
+  height: 100%;
+}
+
+form .form-input {
+  background-color: var(--light);
+  border: 1px solid var(--green3);
+}
+
+#create-list-btn {
+  font-size: 36px;
+  margin: 10px;
+}
+
+#btn-xxl {
+  font-size: xx-large;
+}
+
+#calendar {
+  color: var(--dark);
+  /* background-color: var(--green6); */
+}
+
+.login-img {
+  height: 45%;
+  width: 80%;
+}
+
+.header-btns {
+font-size: x-large;
+margin: 0 10px;
+}
+
+.giftpot-item {
+  position: relative;
+}
+
+.buy-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.del-btn {
+  position: absolute;
+  bottom: -36px;
+  right: 12px;
+}
+/*  * PROFILE-IMG */ /* #region */
+.profile-img {
+  width: 100%;
+  height: 100%;
+}
+
+#profile-img-left-1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 350px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 600px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 850px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-5 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 1100px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 350px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 600px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 850px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-5 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 1100px;
+  right: 8px;
+  z-index: -1;
+}
+/* #endregion */
+
