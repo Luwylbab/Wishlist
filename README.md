@@ -1,7 +1,7 @@
-# ☕THE GITPOT APP☕
+# ☕THE GiftPot APP☕
 ## Project 2
 ## Description
-The GitPot application is a free-to-use website designed to help its users publicize their wanted gifts. GitPot can be used to create a wishlist of items that you would like to receive as gifts. Your friends can then view this wishlist on the website and have options to give you the gift you want. This approach is a great way to ensure that you receive gifts that you actually want and need. It also makes it easier for your friends to choose a gift for you, as they can see exactly what you are looking for.
+The GiftPot application is a free-to-use website designed to help its users publicize their wanted gifts. GiftPot can be used to create a wishlist of items that you would like to receive as gifts. Your friends can then view this wishlist on the website and have options to give you the gift you want. This approach is a great way to ensure that you receive gifts that you actually want and need. It also makes it easier for your friends to choose a gift for you, as they can see exactly what you are looking for.
 
 ## Table of Contents (Optional)
 
@@ -21,18 +21,18 @@ For a first time user, go to the welcome page and click on sign up. This will gu
 ![Alt text](/public/assets/images/WelcomePage.png)
 On this page, you will create an account using your name, email, & password. Write them down! All your items will be linked to your account.
 ![Alt text](/public/assets/images/SignUp.png)
-After creating your account, the site will redirect you to your personal GitPot! Here you can add the items you would like to get gifted on a particular date.
-When you are ready to submit your item click on create my GitPot. 
-![Alt text](/public/assets/images/GitPot%20Example.png)
-You got it! Now you've successfully created a GitPot, you can share this list with your loved ones and wait for the magic to happen. 
-GitPot support redirection to the products' website for a fast & hastle free buying experience. 
+After creating your account, the site will redirect you to your personal GiftPot! Here you can add the items you would like to get gifted on a particular date.
+When you are ready to submit your item click on create my GiftPot. 
+![Alt text](/public/assets/images/GiftPot%20Example.png)
+You got it! Now you've successfully created a GiftPot, you can share this list with your loved ones and wait for the magic to happen. 
+GiftPot support redirection to the products' website for a fast & hastle free buying experience. 
 ![Alt text](/public/assets/images/NewGitPot.png)
 
 ⚠️REMEMBER⚠️
 Once you've been given a desired item from your list, delete such item from your list. This would prevent potential repeats.
 
 ## Technologies 🤖
-GitPot was built using the following technologies:
+GiftPot was built using the following technologies:
 # Front-End:
 - HTML 
 - CSS
@@ -45,7 +45,7 @@ GitPot was built using the following technologies:
 - Sequelize
 # Foreign Technology:
 ## validator (npm)
-Validator is used to validate the users urls (on create a GitPot Form).
+Validator is used to validate the users urls (on create a GiftPot Form).
 
 ## fullCalendar (future dev)
 
