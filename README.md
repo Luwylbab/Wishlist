@@ -1,7 +1,7 @@
 # Project2
 # ☕THE GITPOT APP☕
 ## Description
-The GitPot application is a free to use website designed to help its users publicize their wanted gifts. GitPot can be used to create a wishlist of items that you would like to receive as gifts. Your friends can then view this wishlist on the website and have options to give you the gift you want. This approach is a great way to ensure that you receive gifts that you actually want and need. It also makes it easier for your friends to choose a gift for you, as they can see exactly what you are looking for.
+The GitPot application is a free-to-use website designed to help its users publicize their wanted gifts. GitPot can be used to create a wishlist of items that you would like to receive as gifts. Your friends can then view this wishlist on the website and have options to give you the gift you want. This approach is a great way to ensure that you receive gifts that you actually want and need. It also makes it easier for your friends to choose a gift for you, as they can see exactly what you are looking for.
 
 ## 🏁 How to get started 🏁
 For a first time user, go to the welcome page and click on sign up. This will guide you to the signning up process.
@@ -30,8 +30,9 @@ GitPot was built using the following technologies:
 - Express.JS
 - Mysql
 - Sequelize
-Foreign Technology:
+# Foreign Technology:
 ## validator (npm)
+Validator is used to validate the users urls (on create a GitPot Form).
 ## fullCalendar (future dev)
 
 
