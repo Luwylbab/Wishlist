@@ -58,6 +58,29 @@ const addItem = () => {
   `;
 
   additionalItemsDiv.appendChild(itemRow);
+
+  // const item = document.querySelector('#item-name').value.trim();
+  // const price = document.querySelector('#item-price').value.trim();
+  // const link = document.querySelector('#item-link').value.trim();
+
+  // const response = await fetch(`/api/lists`, {
+  //   method: 'POST',
+  //   body: JSON.stringify({ name, expiration, item, price, link }),
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  // });
+
+  // console.log('Add Item Post', response)
+
+  // const result = await response.json()
+  //   console.log(result);
+
+  // if (response.ok) {
+  //   document.location.replace('/profile');
+  // } else {
+  //   alert('Failed to add item to GiftPot');
+  // }
 };
 
 const removeItem = () => {
