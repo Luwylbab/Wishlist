@@ -5,21 +5,21 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all Lists and JOIN with user data
-    const listData = await List.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+    // const listData = await List.findAll({
+    //   include: [
+    //     {
+    //       model: User,
+    //       attributes: ['name'],
+    //     },
+    //   ],
+    // });
 
-    // Serialize data so the template can read it
-    const lists = listData.map((List) => list.get({ plain: true }));
+    // // Serialize data so the template can read it
+    // const lists = listData.map((List) => list.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      lists, 
+      // lists, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -112,17 +112,17 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-// router.get('/calendar', async (req, res) => {
-//   try {
-//     // Pass serialized data and session flag into template
-//     res.render('calendar-template', { 
-//       calendarData:[], 
-//       logged_in: req.session.logged_in, 
-//     layout:'calendar'
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+router.get('/calendar', async (req, res) => {
+  try {
+    // Pass serialized data and session flag into template
+    res.render('calendar-template', { 
+      calendarData:[], 
+      logged_in: req.session.logged_in, 
+    layout:'calendar'
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
