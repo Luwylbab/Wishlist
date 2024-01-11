@@ -27,49 +27,49 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/list/:id', async (req, res) => {
-  try {
-    const listData = await List.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/list/:id', async (req, res) => {
+//   try {
+//     const listData = await List.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    const list = listData.get({ plain: true });
+//     const list = listData.get({ plain: true });
 
-    res.render('list', {
-      ...list,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('list', {
+//       ...list,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
-router.get('/edit/:id', async (req, res) => {
-  try {
-    const listData = await List.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/edit/:id', async (req, res) => {
+//   try {
+//     const listData = await List.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    const list = listData.get({ plain: true });
+//     const list = listData.get({ plain: true });
 
-    res.render('edit', {
-      ...list,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('edit', {
+//       ...list,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
