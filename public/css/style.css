@@ -276,13 +276,14 @@ border-radius: 1px;
   display: inline-block;
 }
 /* #endregion */
-/*  * DEVELOPING CODE */
+/*  * ITEM-ROW */ /* #region */
 .item-row {
   display: flex;
   align-items: center;
   padding: 4px;
 }
-
+/* #endregion */
+/*  * IMG-CONTAINER */ /* #region */
 #img-container {
   padding-left: 0;
   padding-right: 0;
@@ -291,56 +292,67 @@ border-radius: 1px;
   justify-content: space-between;
   align-items: center;
 }
-
+/* #endregion */
+/*  * MAIN-MENU-IMG */ /* #region */
 .main-menu-img {
   width: 100%;
   height: 100%;
 }
-
+/* #endregion */
+/*  * FORM-INPUT */ /* #region */
 form .form-input {
   background-color: var(--light);
   border: 1px solid var(--green3);
 }
-
+/* #endregion */
+/*  * CREATE-LIST-BTN */ /* #region */
 #create-list-btn {
   font-size: 36px;
   margin: 10px;
 }
-
+/* #endregion */
+/*  * BTN-XXL */ /* #region */
 #btn-xxl {
   font-size: xx-large;
 }
-
+/* #endregion */
+/*  * CALENDAR */ /* #region */
 #calendar {
   color: var(--dark);
   /* background-color: var(--green6); */
 }
-
+/* #endregion */
+/*  * LOGIN-IMG */ /* #region */
 .login-img {
   height: 45%;
   width: 80%;
 }
-
+/* #endregion */
+/*  * HEADER-BTNS */ /* #region */
 .header-btns {
 font-size: x-large;
 margin: 0 10px;
 }
-
+/* #endregion */
+/*  * GIFTPOT-ITEM */ /* #region */
 .giftpot-item {
   position: relative;
 }
-
+/* #endregion */
+/*  * BUY-BTN */ /* #region */
 .buy-btn {
   position: absolute;
   bottom: 12px;
   right: 12px;
 }
-
+/* #endregion */
+/*  * DEL-BTN */ /* #region */
 .del-btn {
   position: absolute;
   bottom: -36px;
   right: 12px;
 }
+/* #endregion */
 /*  * PROFILE-IMG */ /* #region */
 .profile-img {
   width: 100%;
@@ -437,4 +449,3 @@ margin: 0 10px;
   z-index: -1;
 }
 /* #endregion */
-
