@@ -13,11 +13,11 @@ List.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     expiration: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     item: {
       type: DataTypes.STRING,

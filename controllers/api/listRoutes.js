@@ -20,6 +20,22 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// router.post('/add', withAuth, async (req, res) => {
+//   try {
+//     const newItem = await List.create({
+//       item: req.body.item,
+//       price: parseInt(req.body.price),
+//       link: req.body.link,
+//       user_id: req.session.user_id,
+//     });
+
+//     res.status(200).json(newItem);
+//   } catch (err) {
+//     console.log(err)
+//     res.status(400).json(err);
+//   }
+// });
+
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const updatedList = await List.update(
