@@ -163,7 +163,6 @@ border-radius: 1px;
 
 /* #endregion */
 /*  * LOGIN-MENU */ /* #region */
-
 #login-menu {
   padding: 64px;
 }
@@ -176,21 +175,26 @@ border-radius: 1px;
 
 /* #endregion */
 /*  * SIGNUP-MENU */ /* #region */
+#signup-menu {
+  padding: 64px;
+}
+
 #signup-menu label {
   text-decoration: underline;
   font-size: 24px;
+  padding-left: 20px;
 }
 
 /* #endregion */
 /*  * MAIN-LOGIN-DIV */ /* #region */
-  #main-login-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding-top: 8px;
-  }
+#main-login-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 8px;
+}
 /* #endregion */
 /*  * MAIN-LOGIN-BTNS */ /* #region */
 #main-login-btns {
@@ -278,11 +282,15 @@ border-radius: 1px;
 #img-container {
   padding-left: 0;
   padding-right: 0;
-  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-menu-img {
-  width: 100%
+  width: 100%;
+  height: 100%;
 }
 
 form .form-input {
@@ -298,7 +306,13 @@ form .form-input {
 #btn-xxl {
   font-size: xx-large;
 }
+
 #calendar {
   color: var(--dark);
   /* background-color: var(--green6); */
+}
+
+.login-img {
+  height: 45%;
+  width: 80%;
 }
