@@ -16,6 +16,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 No installation is required to use this application. You can access this application by going to our website.
 
 ## How to get started 
+
 For a first time user, go to the welcome page and click on sign up. This will guide you to the signning up process.
 ![Alt text](/public/assets/images/WelcomePage.png)
 On this page, you will create an account using your name, email, & password. Write them down! All your items will be linked to your account.
@@ -26,7 +27,6 @@ When you are ready to submit your item click on create my GitPot.
 You got it! Now you've successfully created a GitPot, you can share this list with your loved ones and wait for the magic to happen. 
 GitPot support redirection to the products' website for a fast & hastle free buying experience. 
 ![Alt text](/public/assets/images/NewGitPot.png)
-
 
 ⚠️REMEMBER⚠️
 Once you've been given a desired item from your list, delete such item from your list. This would prevent potential repeats.
