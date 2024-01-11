@@ -1,61 +1,93 @@
-<div class="row">
-  <div class="col-auto var-text-light custom-border-lg custom-bg-green3 custom-inline col-6">
-    <h2 class="custom-text-xl">Welcome, {{name}}!</h2>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6  var-bg-green3 custom-border" id="new-giftpot">
-    <h3 class="var-text-light custom-text-lg custom-underline">Create a GiftPot</h3>
-  <form class="form new-list-form">
-    <div class="form-group">
-      <label for="list-name">GiftPot name:</label>
-      <input class="form-input" type="text" id="list-name" name="list-name" />
-    <label for="list-exp">GiftPot Exp. Date:</label>
-    <input class="form-input" type="text" id="list-exp" name="list-exp" />
-  </div>
-  <div class="form-group">
-    <div class="item-row">
-      <label for="item-name">Item:</label>
-      <input class="form-input" type="text" id="item-name" name="item-name" />
-      <label for="item-price">Price:</label>
-      <input class="form-input" type="text" id="item-price" name="item-price" />
-      <label for="item-link">Link:</label>
-      <input class="form-input" type="text" id="item-link" name="item-link" />
+<div class="flex-row">
+  <div class="flex-column custom-inline">
+      <div class="var-text-light custom-border-lg custom-bg-green3 custom-inline mb-4">
+        <h2 class="custom-text-xl text-center p-4">Welcome, {{name}}!</h2>
     </div>
-      <div id="additional-items">
-        <button type="button" class="btn" id="add-item">Add Item</button>
-        <button type="button" class="btn" onclick="removeItem()">Remove Item</button>
-      </div>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn" id="create-list-btn">Create my GiftPot!</button>
-    </div>
-  </form>
-  </div>
-</div>
-  {{#if lists.length}}
-  <div class="col-md-6 list-array">
-    <h3>Your GiftPots:</h3>
-
-    {{#each lists as |list|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4>{{list.name}}</h4>
-        <h2>{{list.expiration}}</h2>
+    <div class="var-bg-green3 custom-border p-4" id="new-giftpot">
+      <h3 class="var-text-light custom-text-lg custom-underline">Add an Item</h3>
+      <form class="form new-list-form">
+        <div class="form-group">
           <div class="item-row">
-          <p>{{list.item}}</p>
-          <p>{{list.price}}</p>
-          <a href="{{list.link}}"><button>BUY</button></a>
+            <div class="mr-4">
+              <label for="item-name" class="var-text-light custom-text-md mr-2">Item</label>
+              <input class="form-input" type="text" id="item-name" name="item-name" />
+            </div>
+            <div class="ml-4">
+              <label for="item-price" class="var-text-light custom-text-md mr-2">Price</label>
+              <input class="form-input" type="text" id="item-price" name="item-price" />
+            </div>
           </div>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{list.id}}">DELETE</button>
+          <div class="item-row">
+            <div class="mr-4">
+              <label for="list-exp" class="var-text-light custom-text-md">Event Name</label>
+              <input class="form-input" type="text" id="list-name" name="list-name" />
+            </div>
+            <div class="ml-4">
+              <label for="item-price" class="var-text-light custom-text-md mr-2">Event Date</label>
+              <input class="form-input" type="text" id="list-exp" name="list-exp" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="list-exp" class="var-text-light custom-text-md">Link</label>
+          <input class="form-input" type="text" id="item-link" name="item-link" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn" id="create-list-btn">Add to GiftPot!</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {{#if lists.length}}
+  <div class="col-md-5 list-array mx-2">
+    <h3 class="var-text-green5 custom-text-xxl custom-underline text-center">Your GiftPot</h3>
+    {{#each lists as |list|}}
+    <div class="row mb-4 justify-center">
+      <div class="col-md-8 m-2 p-2 custom-border custom-bg-green6 giftpot-item">
+        <h2 class="var-text-light custom-underline">{{list.item}}</h2>
+        <h2 class="var-text-light">${{list.price}}</h2>
+        <h4 class="var-text-light">For {{list.name}}</h4>
+        <h5 class="var-text-light">on {{list.expiration}}</h5>
+        <a href="{{list.link}}"><button class="btn buy-btn custom-text-lg">BUY</button></a>
+        <button class="btn btn-sm btn-danger del-btn" data-id="{{list.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
   </div>
   {{/if}}
 </div>
+
+<div class="custom-bg-light" id="profile-img-left-1">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift1.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-left-2">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift2.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-left-3">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift3.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-left-4">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift4.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-left-5">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift5.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+
+<div class="custom-bg-light" id="profile-img-right-1">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift6.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-right-2">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift7.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-right-3">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift8.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-right-4">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift9.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+<div class="custom-bg-light" id="profile-img-right-5">
+  <img class="profile-img custom-border p-1" src="/assets/images/Gift10.png" alt="A wrapped gift with a red bow and tea leaves on the wrapping paper">
+</div>
+
 
 <script src="./js/profile.js"></script>
