@@ -1,4 +1,3 @@
-const validator = require('validator');
 let listArray = []
 const newFormHandler = async (event) => {
   event.preventDefault();
@@ -17,9 +16,6 @@ const newFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-    if (validator.isURL(link)) {
-      console.log('suceessful link')
-    }
 
     const result = await response.json()
       console.log(result);
