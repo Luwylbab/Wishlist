@@ -325,3 +325,116 @@ form .form-input {
 font-size: x-large;
 margin: 0 10px;
 }
+
+.giftpot-item {
+  position: relative;
+}
+
+.buy-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.del-btn {
+  position: absolute;
+  bottom: -36px;
+  right: 12px;
+}
+/*  * PROFILE-IMG */ /* #region */
+.profile-img {
+  width: 100%;
+  height: 100%;
+}
+
+#profile-img-left-1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 350px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 600px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 850px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-left-5 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 1100px;
+  left: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 350px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 600px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 850px;
+  right: 8px;
+  z-index: -1;
+}
+
+#profile-img-right-5 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 1100px;
+  right: 8px;
+  z-index: -1;
+}
+/* #endregion */
+

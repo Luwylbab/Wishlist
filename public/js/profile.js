@@ -8,8 +8,7 @@ const newFormHandler = async (event) => {
   const price = document.querySelector('#item-price').value.trim();
   const link = document.querySelector('#item-link').value.trim();
 
-
-  if (name && item) {
+  if (price && item) {
     const response = await fetch(`/api/lists`, {
       method: 'POST',
       body: JSON.stringify({ name, expiration, item, price, link }),
@@ -111,15 +110,3 @@ const removeItem = () => {
     additionalItemsDiv.removeChild(lastItemRow);
   }
 };
-
-document
-  .querySelector('.new-list-form')
-  .addEventListener('submit', newFormHandler);
-
-document
-  .querySelector('#add-item')
-  .addEventListener('click', addItem);
-
-document
-  .querySelector('.list-array')
-  .addEventListener('click', delButtonHandler);
