@@ -112,17 +112,17 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/calendar', async (req, res) => {
-  try {
-    // Pass serialized data and session flag into template
-    res.render('calendar-template', { 
-      calendarData:[], 
-      logged_in: req.session.logged_in, 
-    layout:'calendar'
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get('/calendar', async (req, res) => {
+//   try {
+//     // Pass serialized data and session flag into template
+//     res.render('calendar-template', { 
+//       calendarData:[], 
+//       logged_in: req.session.logged_in, 
+//     layout:'calendar'
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
