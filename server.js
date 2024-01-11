@@ -40,14 +40,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false })
-  .then(() => {
-    console.log('Sequelize models synchronized with the database');
-    app.listen(PORT, () => {
-      console.log('Express server started');
-      console.log(`Now listening on port ${PORT}`);
-    });
-  })
-  .catch((error) => {
-    console.error('Error synchronizing Sequelize models:', error);
-  });
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});
