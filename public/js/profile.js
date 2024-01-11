@@ -110,3 +110,15 @@ const removeItem = () => {
     additionalItemsDiv.removeChild(lastItemRow);
   }
 };
+
+document
+  .querySelector('.new-list-form')
+  .addEventListener('submit', newFormHandler);
+
+document
+  .querySelector('#add-item')
+  .addEventListener('click', addItem);
+
+document
+  .querySelector('.list-array')
+  .addEventListener('click', delButtonHandler);
