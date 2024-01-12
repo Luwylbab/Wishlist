@@ -44,8 +44,6 @@ GiftPot was built using the following technologies:
 - Mysql
 - Sequelize
 # Foreign Technology:
-## validator (npm)
-Validator is used to validate the users urls (on create a GiftPot Form).
 
 ## fullCalendar (future dev)
 
